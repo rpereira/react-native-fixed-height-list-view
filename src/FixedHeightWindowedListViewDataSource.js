@@ -1,6 +1,3 @@
-/**
- * @providesModule FixedHeightWindowedListViewDataSource
- */
 'use strict';
 
 import _ from 'lodash';
@@ -15,7 +12,6 @@ import invariant from 'invariant';
  *
  */
 class FixedHeightListViewDataSource {
-
   constructor(params) {
     this._dataSource = [];
     this._lookup = {};
@@ -382,4 +378,4 @@ class FixedHeightListViewDataSource {
   }
 }
 
-module.exports = FixedHeightListViewDataSource;
+export default FixedHeightListViewDataSource;
