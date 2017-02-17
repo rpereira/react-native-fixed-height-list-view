@@ -1,5 +1,16 @@
 {
+  "name": "react-native-fixed-height-list-view",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rpereira/react-native-fixed-height-list-view"
+  },
+  "bugs": {
+    "url": "https://github.com/rpereira/react-native-fixed-height-list-view/issues"
+  },
   "dependencies": {
-    "invariant": "^2.2.2"
+    "invariant": "^2.2.2",
+    "lodash": "^4.17.4"
   }
 }

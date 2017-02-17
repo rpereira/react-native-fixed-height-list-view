@@ -1,37 +1,32 @@
-/**
- * @providesModule FixedHeightWindowedListView
- */
 'use strict';
 
 import React, { Component } from 'react'
 import {
   Platform,
   ScrollView,
-  Text,
   View,
 } from 'react-native';
+import _ from 'lodash';
 
-import FixedHeightWindowedListViewDataSource from 'FixedHeightWindowedListViewDataSource';
+import FixedHeightWindowedListViewDataSource from './FixedHeightWindowedListViewDataSource';
 import clamp from './clamp';
 import deepDiffer from './deepDiffer';
 import invariant from 'invariant';
-import _ from 'lodash';
 
 /**
  * An experimental ListView implementation that only renders a subset of rows of
  * a potentially very large set of data.
  *
- * Row data should be provided as a simple array corresponding to rows. `===`
- * is used to determine if a row has changed and should be re-rendered.
+ * Row data should be provided as a simple array corresponding to rows. `===` is
+ * used to determine if a row has changed and should be re-rendered.
  *
  * Rendering is done incrementally by row to minimize the amount of work done
  * per JS event tick.
  *
- * Rows must have a pre-determined height, thus FixedHeight. The height
- * of the rows can vary depending on the section that they are in.
+ * Rows must have a pre-determined height, thus FixedHeight. The height of the
+ * rows can vary depending on the section that they are in.
  */
 export default class FixedHeightWindowedListView extends Component {
-
   constructor(props, context) {
     super(props, context);
 
