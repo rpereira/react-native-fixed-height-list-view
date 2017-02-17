@@ -1,3 +1,2 @@
-import FixedHeightWindowedListView from './src/FixedHeightWindowedListView';
-
-export default FixedHeightWindowedListView;
+var FixedHeightWindowedListView = require('./src/FixedHeightWindowedListView')
+module.exports = FixedHeightWindowedListView;
